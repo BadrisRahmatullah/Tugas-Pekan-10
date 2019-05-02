@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int k = 0;
+
+        System.out.print("Input Kalimat : ");
+        String baru = s.next();
+
+        char[] proglan = baru.toCharArray();
+
+        System.out.print("Input Huruf   : ");
+        char cari = s.next().charAt(0);
+
+        System.out.print("Ada di index ke : ");
+        for (int i = 0; i < proglan.length; i++) {
+            if (cari == proglan[i]) {
+                System.out.print(i);
+                System.out.print(", ");
+                k = 1;
+            }
+        }
+
+        if (k == 0) {
+            System.out.println("Tidak Ditemukan");
+        }
+
+    }
+
+}
